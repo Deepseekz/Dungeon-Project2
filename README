@@ -1,0 +1,17 @@
+Projet creer sans Gradle, je n'ai pas reussi à rajouter Gradle par la suite, cependant le projet marche sans problème via le lancement du Main
+
+JDK: 17
+Bibliothèque graphique: Swing
+
+Controles:
+avancer : ZQSD ou fleches directionnelles
+courir : maj + avancer
+roulade : espace + avancer
+attaque : x
+
+Sources:
+Personnage : https://www.spriters-resource.com/fullview/47319/
+Le reste à été produit via le logiciel Aseprite.
+
+Certaines choses n'on pas pu être implémentés tel que la prise de dégats, les attaques et les interactions avec les objets.
+Petit bug avec la collision de murs lors d'un déplacement diagonal.
