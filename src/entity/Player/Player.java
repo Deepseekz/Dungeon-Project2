@@ -414,8 +414,6 @@ public class Player extends Entity {
         }
 
         g2.drawImage(image, x, y, playerWidth, playerHeight, null);
-        g2.setColor(Color.GREEN);
-        g2.fill(hitbox);
 
     }
 

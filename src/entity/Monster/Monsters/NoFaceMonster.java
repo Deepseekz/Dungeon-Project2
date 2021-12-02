@@ -133,8 +133,6 @@ public class NoFaceMonster extends Monster {
         }
         g2.drawImage(monster, x, y, null);
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
-
-        g2.setColor(Color.RED);
-        g2.fill(hitbox);
+        
     }
 }
