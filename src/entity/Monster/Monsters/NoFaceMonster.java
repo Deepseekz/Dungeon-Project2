@@ -45,7 +45,9 @@ public class NoFaceMonster extends Monster {
 
     public void isDead(){
         if(health <= 0){
-            gamePanel.monsters[0] = null;
+            NoFaceMonster monster = new NoFaceMonster(gamePanel);
+            monster.setTarget(player);
+            gamePanel.monsters[0] = monster;
         }
     }
 
@@ -133,6 +135,6 @@ public class NoFaceMonster extends Monster {
         }
         g2.drawImage(monster, x, y, null);
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
-        
+
     }
 }

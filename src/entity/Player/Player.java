@@ -20,6 +20,7 @@ public class Player extends Entity {
     public Inventory inventory;
     public boolean hisTurn = true;
     public int damage = 10;
+    public int timer = 0;
 
     boolean isRolling = false;
     boolean isAttacking = false;
@@ -137,6 +138,8 @@ public class Player extends Entity {
 
     public void update() {
 
+        timer += 1;
+        regeneration();
         animationSpeed = 15;
         speed = 2;
 
@@ -252,6 +255,13 @@ public class Player extends Entity {
 
         isDead();
         hitbox.setLocation(x+8, y+18);
+    }
+
+    private void regeneration() {
+        if (timer%20 == 1){
+            if (health < maxHealth)
+                health += 1;
+        }
     }
 
     private void isAttacking() {
